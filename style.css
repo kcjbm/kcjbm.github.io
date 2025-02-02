@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(background.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 25%;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #8B2D76;
+    padding: 3%;
+}
+
+#question {
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#answer {
+    width: 75%;
+    margin: 10% 0 0 0;
+    border: 2px solid #8B2D76;
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #000000;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+#answer:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px #8B2D76;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+#checkButton {
+    width: 50%;
+    margin: 5% 0 0 0;
+    border: 2px solid #8B2D76;
+    border-radius: 8px;
+    background-color: #000000;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+#checkButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8B2D76;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+
+@media (max-width: 600px) {
+    #container {
+        width: 85%;
+        height: 55%;
+    }
+}
