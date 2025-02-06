@@ -4,25 +4,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('checkButton').innerText = 'Sprawdź';
 });
 
-document.addEventListener("contextmenu", (event) => event.preventDefault());
-
-document.addEventListener("keydown", (event) => {
-    if (event.ctrlKey && (event.key === 'u' || event.key === 'U')) {
-        event.preventDefault();
-    }
-
-    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
-        event.preventDefault();
-    }
-});
-
-document.addEventListener("keydown", (event) => {
-    if (event.ctrlKey && event.key === 's') {
-        event.preventDefault();
-        alert('Zapisywanie strony jest zablokowane!');
-    }
-});
-
 const answers = {
     1: /k(s|ś)ie(z|ż)yc/gi,
     2: /pianino/,
@@ -90,14 +71,13 @@ function checkAnswer(id) {
     const answer = document.getElementById('answer').value;
     if (answer) {
         if (answer.match(answers[id])) {
-            // if (id != 7) {
-            //     nextQuest(id+1);
-            // } else {
-            //     document.getElementById('question').innerText = 'To była ostatnia zagadka.';
-            //     document.getElementById('checkButton').style.display = 'none';
-            //     document.getElementById('answer').style.display = 'none';
-            // }
-            nextQuest(id+1);
+            if (id != 9) {
+                nextQuest(id+1);
+            } else {
+                document.getElementById('question').innerText = 'To była ostatnia zagadka.';
+                document.getElementById('checkButton').style.display = 'none';
+                document.getElementById('answer').style.display = 'none';
+            }
         }
 
         document.getElementById('answer').value = '';
