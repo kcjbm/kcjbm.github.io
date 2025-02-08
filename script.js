@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 const answers = {
-    1: /k(s|ś)ie(z|ż)yc/gi,
-    2: /pianino/,
-    3: /cie(n|ń)/,
+    1: /(K|k)(S|Ś|s|ś)(I|i)(E|e|Ę|ę)(Z|Ż|z|ż)(Y|y)(C|c)/g,
+    2: /pianino/gi,
+    3: /cie(n|ń|N|Ń)/gi,
     4: 30,
-    5: /prz(z|y)sz(ł|l)o(s|ś)(c|ć)/,
-    6: /czas/,
+    5: /prz(z|Z|y|Y)sz(ł|l|L|Ł)o(s|ś|Ś|S)(c|ć|C|Ć)/gi,
+    6: /czas/gi,
     7: 312211,
-    8: /blast/,
-    9: /ferie zimowe/
+    8: /blast/gi,
+    9: /ferie zimowe/gi
 }
 
 const questions = {
